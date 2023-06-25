@@ -20,11 +20,34 @@
             margin: 10px 0;
         }
 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #eeff00;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            background-color: #ffffff;
+        }
+
         .contact-form {
             text-align: left;
             margin: 5px;
             max-width: 500px;
-            
         }
 
         .contact-form label {
@@ -37,7 +60,7 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #eeff00;
             border-radius: 4px;
         }
 
@@ -47,7 +70,7 @@
 
         .contact-form button {
             background-color: #2f20ad;
-            color: white;
+            color: rgb(255, 251, 0);
             padding: 10px 20px;
             border: none;
             border-radius: 50px;
@@ -67,6 +90,27 @@
         .contact-details p.email-phone {
             text-decoration: underline;
         }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .contact-form textarea {
+                height: 100px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -77,44 +121,163 @@
         <li><a href="SIGN UP.html">SIGN UP</a></li>
     </ul>
 
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>CONTACT US</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            background-color: #000000;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            flex-basis: 60%;
+            margin-right: 20px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .contact-form select,
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #f3ef09;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        .contact-form button {
+            background-color: #2f20ad;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .contact-details {
+            flex-basis: 35%;
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-details h2 {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            margin: 10px 0;
+        }
+
+        .email-phone {
+            font-weight: bold;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .contact-container {
+                flex-wrap: wrap;
+            }
+
+            .contact-form {
+                flex-basis: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
     <h1>CONTACT US</h1>
 
-    <div class="contact-form">
-        <form>
-          
-            <label for="help">How can we help you?</label>
-            <select id="help" name="help">
-                <option value="General">General/Other</option>
-                <option value="My Order">My Order</option>
-                <option value="Support">Support</option>
-                <option value="Sales Enquiry">Sales Enquiry</option>
-                <option value="feedback">Feedback</option>
-               
-            </select>
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Get in touch</h2>
+            <form>
+                <label for="help">How can we help you?</label>
+                <select id="help" name="help">
+                    <option value="General">General/Other</option>
+                    <option value="My Order">My Order</option>
+                    <option value="Support">Support</option>
+                    <option value="Sales Enquiry">Sales Enquiry</option>
+                    <option value="feedback">Feedback</option>
+                </select>
 
-            <label for="Name">Name</label>
-            <input type="text" id="Name" name="Name">
+                <label for="Name">Name</label>
+                <input type="text" id="Name" name="Name">
 
-            <label for="PhoneNumber">Phone Number (Optional)</label>
-            <input type="tel" id="PhoneNumber" name="PhoneNumber">
+                <label for="PhoneNumber">Phone Number (Optional)</label>
+                <input type="tel" id="PhoneNumber" name="PhoneNumber">
 
-            <label for="Message">Message</label>
-            <textarea id="Message" name="Message"></textarea>
+                <label for="Message">Message</label>
+                <textarea id="Message" name="Message"></textarea>
 
-            <button type="submit">Submit</button>
-        </form>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="contact-details">
+            <h2>Get in touch</h2>
+            <p>Please call us using the details below:</p>
+            <p><span class="email-phone">Phone:</span> <a href="tel:+254765234675">+254 765 234 675</a></p>
+            <p>Monday-Sunday</p>
+            <p>8.00am - 6.00pm</p>
+            <p><span class="email-phone">Email:</span> <a href="mailto:info@fashionmod.com">info@fashionmod.com</a></p>
+        </div>
     </div>
-
-    <div class="contact-details">
-        <h2>Get in touch</h2>
-        <p>Please call us using the details below:</p>
-        <p><span class="email-phone">Phone:</span> <a href="CONTACT US.html">+254 765 234 675</a></p>
-        <p>Monday-Saturday</p>
-        <p>9.00am - 7.00pm</p>
-        <p><span class="email-phone">Email:</span> <a href="CONTACT US.html">info@designcustomized.com</a></p>
-    </div>
-    
-
-    <h1><img src="6.jpg" width="400"
 </body>
 </html>
+
+

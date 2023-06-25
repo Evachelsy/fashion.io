@@ -9,43 +9,80 @@
             padding: 20px;
             font-family: Arial, sans-serif;
             text-align: left;
+            background-color: #000000;
         }
 
         h1 {
             font-size: 24px;
             margin-top: 0;
+            color: #ffffff;
         }
 
         p {
             margin: 10px 0;
         }
 
-        .contact-form {
-            text-align: left;
-            margin: 5px;
-            max-width: 500px;
-            
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #e5ff00;
+            border-radius: 6px;
         }
 
-        .contact-form label {
+        li {
+            float: left;
+        }
+
+        li a {
             display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #0c0000;
             font-weight: bold;
         }
 
-        .contact-form input,
-        .contact-form textarea {
+        li a:hover {
+            background-color: #ddd;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #2fe60b;
             border-radius: 4px;
         }
 
-        .contact-form textarea {
+        .form-group textarea {
             height: 150px;
         }
 
-        .contact-form button {
+        .button-container {
+            text-align: center;
+        }
+
+        .button-container button {
             background-color: #2f20ad;
             color: white;
             padding: 10px 20px;
@@ -54,18 +91,30 @@
             cursor: pointer;
         }
 
-        .contact-details {
-            text-align: left;
-            margin: 5px;
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            color: #ffffff;
         }
 
-        .contact-details p {
-            text-align: left;
-            margin: 5px;
-        }
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
 
-        .contact-details p.email-phone {
-            text-decoration: underline;
+            h1 {
+                font-size: 20px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                margin: 10px 0;
+            }
+
+            .form-group textarea {
+                height: 100px;
+            }
         }
     </style>
 </head>
@@ -77,62 +126,82 @@
         <li><a href="CONTACT US.html">CONTACT US</a></li>
     </ul>
 
-    <h1>SIGN UP</h1>
+    <div class="container">
+        <h1>SIGN UP</h1>
 
-    <div class="contact-form">
         <form>
- 
-          </select>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
 
-            <label for="First Name">First Name</label>
-            <input type="text" id="Name" name="Name">
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
 
-            <label for="Last Name">Last Name</label>
-            <input type="tel" id="Last Name" name="Last Name">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-            <label for="Email Address">Email Address</label>
-            <input type="tel" id="Email Address" name="Email Address"> 
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
 
-            <label for="Address">Address</label>
-            <input type="tel" id="Address" name="Address"> 
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
 
-            <label for="City">City</label>
-            <input type="tel" id="City" name="City"> 
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" required>
+            </div>
 
-            <label for="Country">Country</label>
-            <input type="tel" id="Country" name="Country"> 
+            <div class="form-group">
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode" name="postcode" required>
+            </div>
 
-            <label for="Postcode">Postcode</label>
-            <input type="tel" id="Postcode" name="Postcode"> 
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
 
-            <label for="Password">Password</label>
-            <input type="tel" id="Password" name="Password"> 
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
 
-            <label for="Confirm Password">Confirm Password</label>
-            <input type="tel" id="Confirm Password" name="Confirm Password"> 
+            <div class="button-container">
+                <button type="submit">CREATE ACCOUNT</button>
+            </div>
+        </form>
 
-           
-
-            <button type="CREATE ACCOUNT">CREATE ACCOUNT</button>
-                </head>
-                <body>
-                    <h1></h1>
-
-                </body>
-                </html>
+        <div class="message">
             <h1>Already have an account?</h1>
-               
+        </div>
 
-            <label for="Name">Name</label>
-            <input type="tel" id="Name" name="Name"> 
+        <form>
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+            </div>
 
-            <label for="Password">Password</label>
-            <input type="tel" id="Password" name="Password"> 
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
 
-            <button type="SIGN IN">SIGN IN</button>
-           
+            <div class="button-container">
+                <button type="submit">SIGN IN</button>
+            </div>
         </form>
     </div>
 
 </body>
 </html>
+
+
