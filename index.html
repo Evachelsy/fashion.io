@@ -56,6 +56,10 @@
             text-align: center;
         }
 
+        .intro {
+            margin-bottom: 40px;
+        }
+
         .product {
             display: inline-block;
             margin: 20px;
@@ -63,6 +67,25 @@
 
         .product img {
             width: 300px;
+        }
+
+        .cta {
+            margin-top: 40px;
+        }
+
+        .cta button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: #888585;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta button:hover {
+            background-color: #6e6c6c;
         }
 
         footer {
@@ -86,9 +109,12 @@
     </header>
 
     <main>
-        <h2>Fashion Website</h2>
-        <h2>Home Page</h2>
-        
+        <div class="intro">
+            <h2>Welcome to Fashion Mod!</h2>
+            <p>Discover the latest fashion trends and express your unique style.</p>
+        </div>
+
+        <h2>Featured Products</h2>
         <div class="product">
             <img src="1.jpg" alt="Fashion Statement">
             <h3>Product 1</h3>
@@ -111,6 +137,10 @@
             <img src="4.jpg" alt="Fashion Statement">
             <h3>Product 4</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="cta">
+            <button>Shop Now</button>
         </div>
     </main>
 
